@@ -56,5 +56,41 @@ notification.onclick = function(event) {
 }
 ```
 
+### /firebase-messaging-sw.js
+17行目 クリック時のURL
+```
+// 通知メッセージのカスタマイズ
+var notificationTitle = payload.data.title;
+var notificationOptions = {
+  body: payload.data.body,
+  icon: '/img/logo.png',
+  url: 'URL(htttps://example.com)'  // TODO URLを変更
+};
+```
+
+### /manifest.json
+2、3行目 nameとshort nameを変更
+```
+"name"              : "SERVICE NAME",
+"short_name"        : "SERVICE NAME",
+```
+
+### /send_notify.php
+12行目〜14行目の定数値
+```
+define( 'CONST_FIREBASE_SERVER_KEY' , 'Firebase Server Key' );	// Firebaseのクラウドメッセージ内にあるサーバーキー
+define( 'CONST_NOTIFICATION_TITLE'  , '通知メッセージタイトル' );
+define( 'CONST_NOTIFICATION_BODY'   , '通知メッセージ本文' );
+```
+
+24行目の送信先tokenをDBより取得
+```
+// TODO db_t_fbs.phpにて保存したテーブルを参照し、送信可能なtokenを取得
+$ary_firebase_token = array(
+  'tokenId00001',
+  'tokenId00002',
+  'tokenId00003'
+);
+```
 
 
