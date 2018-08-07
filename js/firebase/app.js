@@ -121,7 +121,7 @@
         var notification = new Notification(notificationTitle,notificationOptions);
         notification.onclick = function(event) {
             event.preventDefault(); // prevent the browser from focusing the Notification's tab
-            window.open("URL(https://example.com)" , '_blank');
+            window.open("URL(https://example.com)" , '_blank'); // TODO URL変更
             notification.close();
         }
     }

@@ -21,6 +21,7 @@
 	$base_url = "https://fcm.googleapis.com/fcm/send";
 
 	// 送信先token
+	// TODO db_t_fbs.phpにて保存したテーブルを参照し、送信可能なtokenを取得
 	$ary_firebase_token = array(
 		'tokenId00001',
 		'tokenId00002',
