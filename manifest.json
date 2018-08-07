@@ -1,0 +1,16 @@
+{
+  "name"              : "SERVICE NAME",
+  "short_name"        : "SERVICE NAME",
+  "start_url"         : "/",
+  "display"           : "standalone",
+  "background_color"  : "#ACE",
+  "theme_color"       : "#ACE",
+  "gcm_sender_id"     : "103953800507",
+  "icons": [
+		{
+      "src"           : "/img/logo.png",
+      "sizes"         : "72x72",
+      "type"          : "image/png"
+    }
+	]
+}
