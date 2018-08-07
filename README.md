@@ -40,3 +40,21 @@ var config = {
   messagingSenderId: "messagingSenderId"
 };
 ```
+
+### /js/firebase/app.js
+16行目 FirebaseのWebPush証明書
+```
+// VAPID Key
+messaging.usePublicVapidKey('FirebaseのWebPush証明書');
+```
+124行目 クリック時のURL変更
+```
+notification.onclick = function(event) {
+    event.preventDefault(); // prevent the browser from focusing the Notification's tab
+    window.open("URL(https://example.com)" , '_blank'); // TODO URL変更
+    notification.close();
+}
+```
+
+
+
